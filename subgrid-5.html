@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tailwind CSS Subgrid Example 5 - Corrected</title>
+    <!-- Include Tailwind CSS v4 Beta -->
+    <link href="css/app.css" rel="stylesheet" />
+  </head>
+  <body class="p-6">
+    <!-- Example 5: Subgrid with Variable Content Heights (Corrected) -->
+    <section class="mb-12">
+      <h2 class="text-xl font-bold mb-4">
+        Example 5: Subgrid with Variable Content Heights (Corrected)
+      </h2>
+      <div class="grid grid-cols-3 gap-4 border p-4">
+        <!-- Header spanning all columns -->
+        <header class="grid grid-cols-subgrid gap-2 col-span-3 bg-blue-100 p-4">
+          <div class="bg-blue-300 p-2">Logo</div>
+          <nav class="bg-blue-300 p-2">Navigation</nav>
+          <div class="bg-blue-300 p-2">Profile</div>
+        </header>
+
+        <!-- Main Content with Variable Heights -->
+        <main class="grid grid-cols-subgrid gap-2 col-span-2 bg-green-100 p-4">
+          <div class="bg-green-300 p-2">
+            <p>Short content.</p>
+          </div>
+          <div class="bg-green-300 p-2">
+            <p>
+              Longer content that spans multiple lines to demonstrate variable
+              heights in grid items. This ensures that the subgrid maintains
+              column alignment even when some items are taller than others.
+            </p>
+          </div>
+          <div class="bg-green-300 p-2">
+            <p>
+              Medium content length. Lorem ipsum dolor, sit amet consectetur
+              adipisicing elit.
+            </p>
+          </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="col-span-1 bg-yellow-100 p-4">
+          <p>Sidebar content with a fixed height.</p>
+        </aside>
+      </div>
+    </section>
+  </body>
+</html>

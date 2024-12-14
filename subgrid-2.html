@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tailwind CSS Subgrid Examples</title>
+    <!-- Include Tailwind CSS v4 Beta -->
+    <link href="css/app.css" rel="stylesheet" />
+  </head>
+  <body class="p-6">
+    <!-- Example 2: Nested Subgrid for Rows and Columns -->
+    <section class="mb-12">
+      <h2 class="text-xl font-bold mb-4">
+        Example 2: Nested Subgrid for Rows and Columns
+      </h2>
+      <div class="grid grid-cols-4 grid-rows-2 gap-4 border p-4">
+        <!-- Header spanning all columns -->
+        <header
+          class="col-span-4 grid grid-cols-subgrid grid-rows-subgrid bg-purple-100 p-4"
+        >
+          <div
+            class="col-span-4 grid grid-cols-subgrid grid-rows-subgrid gap-2"
+          >
+            <div class="bg-purple-300 p-2">Logo</div>
+            <div class="bg-purple-300 p-2">Navigation</div>
+            <div class="bg-purple-300 p-2">Profile</div>
+            <div class="bg-purple-300 p-2">Search</div>
+          </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="col-span-3 bg-teal-100 p-4">
+          <p>Main content area.</p>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="col-span-1 bg-orange-100 p-4">
+          <p>Sidebar content.</p>
+        </aside>
+      </div>
+    </section>
+  </body>
+</html>

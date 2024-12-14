@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tailwind CSS Subgrid Examples</title>
+    <!-- Include Tailwind CSS v4 Beta -->
+    <link href="css/app.css" rel="stylesheet" />
+  </head>
+  <body class="p-6">
+    <!-- Example 3: Responsive Subgrid Layout -->
+    <section class="mb-12">
+      <h2 class="text-xl font-bold mb-4">
+        Example 3: Responsive Subgrid Layout
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 border p-4">
+        <!-- Header spanning all columns -->
+        <header
+          class="grid grid-cols-subgrid col-span-2 md:col-span-4 bg-red-100 p-4"
+        >
+          <div class="grid grid-cols-subgrid col-span-2 md:col-span-4 gap-2">
+            <div class="bg-red-300 p-2">Logo</div>
+            <div class="bg-red-300 p-2">Navigation</div>
+            <div class="bg-red-300 p-2">Profile</div>
+            <div class="bg-red-300 p-2">Search</div>
+          </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="col-span-2 md:col-span-3 bg-indigo-100 p-4">
+          <p>Main content area.</p>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="col-span-2 md:col-span-1 bg-pink-100 p-4">
+          <p>Sidebar content.</p>
+        </aside>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tailwind CSS Subgrid Examples</title>
+    <!-- Include Tailwind CSS v4 Beta -->
+    <link href="css/app.css" rel="stylesheet" />
+  </head>
+  <body class="p-6">
+    <!-- Example 4: Complex Nested Subgrid with Multiple Layers -->
+    <section class="mb-12">
+      <h2 class="text-xl font-bold mb-4">
+        Example 4: Complex Nested Subgrid with Multiple Layers
+      </h2>
+      <div class="grid grid-cols-3 gap-4 border p-4">
+        <!-- Header spanning all columns -->
+        <header class="grid grid-cols-subgrid col-span-4 bg-gray-100 p-4">
+          <div class="bg-gray-300 p-2">Logo</div>
+          <div class="bg-gray-300 p-2">Navigation</div>
+          <div class="bg-gray-300 p-2">Profile</div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="grid grid-cols-subgrid col-span-2 bg-green-100 p-4">
+          <!-- Sub-Header within Main Content -->
+          <div class="grid grid-cols-subgrid col-span-2 bg-green-300 p-2">
+            <div class="bg-green-400 p-1">Sub-Logo</div>
+            <div class="bg-green-400 p-1">Sub-Navigation</div>
+          </div>
+
+          <!-- Content Blocks -->
+          <div class="bg-green-200 p-2">Content Block 1</div>
+          <div class="bg-green-200 p-2">Content Block 2</div>
+          <div class="bg-green-200 p-2">Content Block 3</div>
+          <div class="bg-green-200 p-2">Content Block 4</div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="col-span-1 bg-yellow-100 p-4">
+          <p>Sidebar content.</p>
+        </aside>
+
+        <!-- Footer spanning all columns -->
+        <footer class="col-span-3 bg-gray-200 p-4">
+          <p>Footer content.</p>
+        </footer>
+      </div>
+    </section>
+  </body>
+</html>
